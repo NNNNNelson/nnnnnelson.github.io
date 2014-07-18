@@ -7,3 +7,14 @@
 {
 	float: right;
 }
+
+#backToTopIcon
+{
+	position: fixed;
+	bottom: 50%;
+	right: 10px;
+	width: 30px;
+	height: 30px;
+	z-index: 100;
+	opacity: 0.4;
+}

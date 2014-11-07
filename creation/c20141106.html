@@ -15,13 +15,103 @@
 	
 		<div data-role="header">
 			<a href="../index.html" data-role="button" rel="external" data-icon="home" data-iconpos="notext"></a>
-			<h1>Canvas<span class="titleDate"><sub>2014-11-06</sub></span></h1>
+			<h1>HTML5 Canvas<span class="titleDate"><sub>2014-11-06</sub></span></h1>
 		</div>
 		
 		<div data-role="content">
 			<a href="#" data-rel="back">Back</a>
-			<div id="toDoList">
-				<h2>Canvas</h2>
+			<div id="canvas">
+				<p>When learning HTML5 on w3cshchool.cc, read the Canvas function of HTML5, tried to create a canvas with using the basic functions of it. Below is the result: </p>
+				<canvas id = "myPainting" style = "border: 1px solid black;" width = "400" height = "400"></canvas>
+				<p>and the code as below:</p>
+				<pre>
+&lt;canvas id = "myPainting" style = "border: 1px solid black;" width = "400" height = "400"&gt;&lt;/canvas&gt;
+&lt;script&gt;
+	var c = document.getElementById("myPainting");
+	var ctx = c.getContext("2d");
+	var grd = ctx.createLinearGradient(0,0,400,0);
+
+	ctx.globalAlpha = 0.2;
+
+	grd.addColorStop(0,"black");
+	grd.addColorStop(1/7*1,"red");
+	grd.addColorStop(1/7*2,"orange");
+	grd.addColorStop(1/7*3,"yellow");
+	grd.addColorStop(1/7*4,"green");
+	grd.addColorStop(1/7*5,"blue");
+	grd.addColorStop(1/7*6,"purple");
+	grd.addColorStop(1/7*7,"white");
+
+	ctx.fillStyle = grd;
+	ctx.fillRect(0,0,400,400);
+
+	ctx.moveTo(200,0);
+	ctx.lineTo(300,400);
+	ctx.stroke();
+	ctx.moveTo(200,0);
+	ctx.lineTo(100,400);
+	ctx.stroke();
+	ctx.moveTo(400,200);
+	ctx.lineTo(100,400);
+	ctx.stroke();
+	ctx.moveTo(400,200);
+	ctx.lineTo(0,200);
+	ctx.stroke();
+	ctx.moveTo(300,400);
+	ctx.lineTo(0,200);
+	ctx.stroke();
+
+	ctx.beginPath();
+	ctx.arc(200,200,200,0,2*Math.PI);
+	ctx.stroke();
+
+	ctx.font = "30px Arial";
+	ctx.fillText("Nelson", 155, 270);
+&lt;/script&gt;
+				</pre>
+
+				<script>
+					var c = document.getElementById("myPainting");
+					var ctx = c.getContext("2d");
+					var grd = ctx.createLinearGradient(0,0,400,0);
+
+					ctx.globalAlpha = 0.2;
+
+					grd.addColorStop(0,"black");
+					grd.addColorStop(1/7*1,"red");
+					grd.addColorStop(1/7*2,"orange");
+					grd.addColorStop(1/7*3,"yellow");
+					grd.addColorStop(1/7*4,"green");
+					grd.addColorStop(1/7*5,"blue");
+					grd.addColorStop(1/7*6,"purple");
+					grd.addColorStop(1/7*7,"white");
+
+					ctx.fillStyle = grd;
+					ctx.fillRect(0,0,400,400);
+
+					ctx.moveTo(200,0);
+					ctx.lineTo(300,400);
+					ctx.stroke();
+					ctx.moveTo(200,0);
+					ctx.lineTo(100,400);
+					ctx.stroke();
+					ctx.moveTo(400,200);
+					ctx.lineTo(100,400);
+					ctx.stroke();
+					ctx.moveTo(400,200);
+					ctx.lineTo(0,200);
+					ctx.stroke();
+					ctx.moveTo(300,400);
+					ctx.lineTo(0,200);
+					ctx.stroke();
+
+					ctx.beginPath();
+					ctx.arc(200,200,200,0,2*Math.PI);
+					ctx.stroke();
+
+					ctx.font = "30px Arial";
+					ctx.fillText("Nelson", 155, 270);
+				</script>
 			</div>
 		</div>
 		

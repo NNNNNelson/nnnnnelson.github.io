@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="http://nnnnnelson-github-blog-storagedata.oss-cn-hangzhou.aliyuncs.com/nnnnnelson_github_blog_pictures/Blog_Logo/NNNNNelsonLogo.ico?Expires=2406180699&OSSAccessKeyId=YPgzqpAvTDs9wJc2&Signature=FjBoIkbHH2XzvwMBDvML3iIaOb4%3D" >
+	<title>NNNNNelson's Github Page</title>
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.css">
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script>
+	<link rel="stylesheet" href="../css/creationContentPage.css">
+</head>
+<body>
+	<div data-role="page">
+	
+		<div data-role="header">
+			<a href="../index.html" data-role="button" rel="external" data-icon="home" data-iconpos="notext"></a>
+			<h1>HTML5 Geolocation<span class="titleDate"><sub>2014-11-07</sub></span></h1>
+		</div>
+		
+		<div data-role="content">
+			<a href="#" data-rel="back">Back</a>
+			<div id="canvas">
+				<p>When learning HTML5 on w3cshchool.cc, read the Geolocation function of HTML5, tried to use this function. Below is the result: </p>
+			<p id="demo">点击按钮获取您当前坐标（可能需要比较长的时间获取）：</p>
+			<button onclick="getLocation()">点我</button>
+			<script>
+			var x=document.getElementById("demo");
+			function getLocation()
+			  {
+			  if (navigator.geolocation)
+			    {
+			    navigator.geolocation.getCurrentPosition(showPosition,showError);
+			    }
+			  else{x.innerHTML="Geolocation is not supported by this browser.";}
+			  }
+			function showPosition(position)
+			  {
+			  x.innerHTML="纬度: " + position.coords.latitude + 
+			  "<br>经度: " + position.coords.longitude;	
+			  }
+			function showError(error)
+			  {
+			  switch(error.code) 
+			    {
+			    case error.PERMISSION_DENIED:
+			      x.innerHTML="用户拒绝对获取地理位置的请求。"
+			      break;
+			    case error.POSITION_UNAVAILABLE:
+			      x.innerHTML="位置信息是不可用的。"
+			      break;
+			    case error.TIMEOUT:
+			      x.innerHTML="请求用户地理位置超时。"
+			      break;
+			    case error.UNKNOWN_ERROR:
+			      x.innerHTML="未知错误。"
+			      break;
+			    }
+			  }
+			</script>	
+			</div>
+		</div>
+		
+		<div data-role="footer">
+			<p id="footerBuild">Build: 20140717</p>
+		</div>		
+		
+	</div>
+</body>
+</html>

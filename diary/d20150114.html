@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="http://nnnnnelson-github-blog-storagedata.oss-cn-hangzhou.aliyuncs.com/nnnnnelson_github_blog_pictures/Blog_Logo/NNNNNelsonLogo.ico?Expires=2406180699&OSSAccessKeyId=YPgzqpAvTDs9wJc2&Signature=FjBoIkbHH2XzvwMBDvML3iIaOb4%3D" >
+	<title>NNNNNelson's Github Page</title>
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.css">
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script>
+	<link rel="stylesheet" href="../css/diaryContentPage.css">
+</head>
+<body>
+	<div data-role="page">
+	
+		<div data-role="header">
+			<a href="../index.html" data-role="button" rel="external" data-icon="home" data-iconpos="notext"></a>
+			<h1>速度完成, 然后开始<span class="titleDate"><sub>2015-01-14</sub></span></h1>
+		</div>
+		
+		<div data-role="content">
+			<a href="#" data-rel="back">Back</a>
+			<p>昨天终于把LDAP配置的能够通过链接测试了, 但是用户还没有真正地导进去. 但至少是个突破性的进展了.</p>
+			<p>其实之前一直都不通的原因很简单--防火墙没"关好", 奇怪, 什么叫没"关好"? 就是说, 我关了, 但是没有正确的关上... CentOS7 中防火墙用的是Firewalld, 我以为还是Linux中的iptables, 结果Stop了iptables, 也disable了iptables, 查看状态确实是Inactive状态, 就以为防火墙没问题了, 之后的一直连接不通也没再考虑过防火墙的事情, 结果最后才发现, 栽在最开始的地方了..</p>
+			<p>哦, 多么痛的领悟, 你曾是我的全部...</p>
+			<hr />
+			<p>14:28更新</p>
+			<p>又有重大突破了, 现在已经成功添加了一个用户进入LDAP server, 然后在公司产品Foglight中也成功的配置好了LDAP, 测试查找相应用户成功, 用该用户登陆页成功了. OMG, 有点小激动呢.</p>
+			<p>前进了一大步, 现在只剩下TSL配置成功, 那么我就大功告成了.</p>
+			<p>Good luck to myself~~</p>
+		</div>
+		
+		<div data-role="footer">
+			<p id="footerBuild">Build: 20140717</p>
+		</div>
+		
+	</div>
+</body>
+</html>
